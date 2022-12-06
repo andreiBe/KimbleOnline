@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="/socket.io/socket.io.js"></script>
+     <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+     <link rel="stylesheet" href="./assets/css/styles.css">
+     <title>Kimble online</title>
+</head>
+<body>
+     <div class="flex" id="tausta">
+          <div id="content"></div>
+          <div class="chat-area">
+               <div class="messages" id="messages"></div>
+               <input type="text" name="message" placeholder="viesti..." id="message-field">
+          </div>
+     </div>
+     <div id="left-top-info">
+          <p id="playernumber"></p>
+          <p id="status-lab">Your status: active</p>
+          <p id="red-lab">Red: </p>
+          <p id="blue-lab">Blue: </p>
+          <p id="yellow-lab">Yellow: </p>
+          <p id="green-lab">Green: </p>
+     </div>
+     <div class="popup bigpopup" style="display: flex;" id="loadingScreen">
+          <h3 id="loading-status">Loading...</h3>
+          <div>
+               <p style="display: inline;">Username:</p>
+               <input type="text" name="username" placeholder="username", id="username-field">
+               <button id="start" disabled>Start</button>
+          </div>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+     <script type="module" src="./index.js"></script>
+     <script type="module" src="./start.js"></script>
+</body>
+</html>

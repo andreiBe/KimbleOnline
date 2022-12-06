@@ -1,0 +1,86 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.flex {
+     display: flex;
+}
+#tausta {
+     background-image: url("../tausta.jpg");
+     background-size: 100% 100%;
+}
+#content {
+     width: 80%;
+     height: 99vh;
+}
+.messages::-webkit-scrollbar{
+     display: none;
+}
+.messages {
+     height: 90vh;
+     overflow-y:scroll;
+     width: 91%;
+     margin-left: 9%;
+     margin-top: 5%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.messages div {
+     font-size: 1em;
+     font-family: 'Roboto', sans-serif;
+}
+#message-field {
+     max-height: 20px;
+     height: 10%;
+     width: 80%;
+}
+.chat-area {
+     width: 20%;
+     max-width: 20%;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     border: 4px solid black;
+}
+.popup {
+     display: none;
+     position: absolute;
+     width: 40%;
+     height: 30%;
+     left: 20%;
+     top: 35%;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     background-color: white;
+     gap: 1em;
+}
+.bigpopup {
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+}
+#left-top-info {
+     margin-left: 1em;
+     position: absolute;
+     left: 0;
+     top: 0;
+     color: lime;
+}
+@media only screen and (max-width: 900px){
+     .chat-area {
+          position: static;
+          width: 100%;
+          max-width: 100%;
+     }    
+     .flex {
+          flex-direction: column;
+          align-items: center;
+     }
+     #left-top-info {
+          font-size: 0.5em;
+     }
+}
